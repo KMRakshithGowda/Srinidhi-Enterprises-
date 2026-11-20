@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Srinidhi Enterprises — Precision Drip & Micro-Irrigation | Bethamangala</title>
+  <meta name="description" content="Srinidhi Enterprises in Bethamangala - Authorized dealer for Kaveri & Nandi Drip Irrigation, Finolex PVC Pipes, Sujay Fittings, Filtration units & Mulch films.">
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="nav-bar">
+    <div class="nav-logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 32 32" fill="none">
+          <path d="M16 2L28 9V23L16 30L4 23V9L16 2Z" fill="currentColor"/>
+          <path d="M16 8C12 12 11 17 15 24C16 19 19 15 23 13C20 13 18 14 16 16C16 13 16 11 16 8Z" fill="#c6f35c"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="brand-name">SRINIDHI</span>
+        <span class="brand-sub">ENTERPRISES</span>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#systems" class="nav-link">SYSTEMS</a>
+      <a href="#hotspots" class="nav-link">TECHNOLOGY</a>
+      <a href="#calculator" class="nav-link">DRIP CALCULATOR</a>
+      <a href="#solutions" class="nav-link">PRODUCTS</a>
+      <a href="#contact" class="nav-link">CONTACT</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a href="https://wa.me/919686636755?text=Hello%20Harsha%20sir,%20I%20am%20inquiring%20about%20irrigation%20supplies%20from%20your%20website." target="_blank" class="talk-btn" rel="noopener">
+        <span>GET IN TOUCH</span>
+        <div class="arrow-sq">›</div>
+      </a>
+    </div>
+  </header>
+
+  <!-- Pinned Scroll Story Stage -->
+  <main id="story">
+    <div class="stage">
+      
+      <!-- Camera Parallax & Background Plate -->
+      <div class="cam" id="cam">
+        <div class="bg-plate"></div>
+        <canvas id="mist-canvas"></canvas>
+        <div class="vignette-overlay"></div>
+      </div>
+
+      <!-- Layer 0: Hero Headline & Kannada Badge -->
+      <section class="layer l0" id="l0">
+        <div class="hero-copy">
+          <div class="chip">SRINIDHI ENTERPRISES · BETHAMANGALA</div>
+          <h1 class="hero-h1">
+            <span class="line-wrap"><span class="line-inner">Precision Irrigation</span></span>
+            <span class="line-wrap"><span class="line-inner highlight">For Every Single Drop</span></span>
+          </h1>
+          <div class="kannada-badge">
+            <span class="k-dot"></span>
+            <span>ಹನಿ ನೀರಾವರಿ ಪದ್ಧತಿಯ ಎಲ್ಲಾ ಗುಣಮಟ್ಟದ ಉಪಕರಣಗಳು ದೊರೆಯುತ್ತವೆ</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Layer 1: HUD & Telemetry Badges -->
+      <section class="layer l1" id="l1">
+        <div class="hud-coords">
+          <div class="hud-reticle"></div>
+          <div class="chip-sm">BETHAMANGALA HUB</div>
+          <pre class="coord-pre">LAT  13.0039° N
+LON  78.3242° E
+ELEV 830 M · KOLAR</pre>
+        </div>
+
+        <div class="hero-caption">
+          <div class="caption-border"></div>
+          <p>AUTHORIZED FINOLEX PIPES & SUJAY FITTINGS.<br>
+          KAVERI & NANDI PLATINUM DRIP SYSTEMS.<br>
+          ENGINEERED FOR RESILIENT AGRICULTURE.</p>
+        </div>
+
+        <div class="scroll-hint">
+          <div class="hint-disc">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <span>SCROLL TO EXPLORE</span>
+        </div>
+      </section>
+
+      <!-- Layer 2: Vision & Live Agro-Weather API Widget -->
+      <section class="layer l2" id="l2">
+        <div class="vision-block">
+          <div class="chip">LIVE AGRO-TELEMETRY</div>
+          <h2 class="vision-h2">
+            <span>Water Optimization</span>
+            <span>Meets Local Ground Truth</span>
+          </h2>
+          <p class="vision-p">Direct micro-climate data powered by Open-Meteo for farmers across Bethamangala & Kolar district.</p>
+          
+          <!-- Live Weather & Irrigation Advisory Card -->
+          <div class="weather-telemetry-card" id="weather-card">
+            <div class="wt-header">
+              <span class="pulse-indicator"></span>
+              <span class="wt-title">BETHAMANGALA FIELD CONDITIONS</span>
+              <span class="wt-live mono">LIVE API</span>
+            </div>
+            <div class="wt-grid">
+              <div class="wt-stat">
+                <span class="wt-label">TEMPERATURE</span>
+                <span class="wt-val" id="wt-temp">--°C</span>
+              </div>
+              <div class="wt-stat">
+                <span class="wt-label">HUMIDITY</span>
+                <span class="wt-val" id="wt-humidity">--%</span>
+              </div>
+              <div class="wt-stat">
+                <span class="wt-label">SOIL EVAPOTRANSPIRATION</span>
+                <span class="wt-val" id="wt-et">Low Stress</span>
+              </div>
+              <div class="wt-stat highlight-stat">
+                <span class="wt-label">IRRIGATION ADVISORY</span>
+                <span class="wt-val green-text" id="wt-advisory">Optimal Drip Timing: Early Morning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Layer 3: Interactive Hotspots on Irrigation Components -->
+      <section class="layer l3" id="l3">
+        <div class="acct-wrap">
+          <p class="acct-para">
+            Engineered micro-irrigation reduces water waste by up to 60%, directing nutrients right to the root zone with zero runoff.
+          </p>
+        </div>
+
+        <!-- Hotspot 1 -->
+        <div class="hotspot hs1" style="left: 18%; top: 52%;" data-idx="0">
+          <button class="hs-dot" aria-label="Kaveri & Nandi Drip Laterals">
+            <span class="hs-cross">+</span>
+          </button>
+          <div class="hs-card">
+            <div class="hs-label">Kaveri & Nandi Drip Laterals</div>
+            <div class="hs-spec">16mm Inline / Online Emitters · UV Stabilized</div>
+          </div>
+        </div>
+
+        <!-- Hotspot 2 -->
+        <div class="hotspot hs2" style="left: 45%; top: 38%;" data-idx="1">
+          <button class="hs-dot" aria-label="Finolex PVC Pressure Pipes">
+            <span class="hs-cross">+</span>
+          </button>
+          <div class="hs-card">
+            <div class="hs-label">Finolex PVC Pressure Pipes</div>
+            <div class="hs-spec">Class 2/3 Borewell Delivery · Leakproof Sujay Fittings</div>
+          </div>
+        </div>
+
+        <!-- Hotspot 3 -->
+        <div class="hotspot hs3" style="left: 68%; top: 62%;" data-idx="2">
+          <button class="hs-dot" aria-label="Hydrocyclone & Disc Filters">
+            <span class="hs-cross">+</span>
+          </button>
+          <div class="hs-card">
+            <div class="hs-label">Hydrocyclone & Screen Filters</div>
+            <div class="hs-spec">Sand & Silt Extraction · Stops Emitter Clogging</div>
+          </div>
+        </div>
+
+        <!-- Hotspot 4 -->
+        <div class="hotspot hs4" style="left: 82%; top: 44%;" data-idx="3">
+          <button class="hs-dot" aria-label="Lakshmi Agri Mulch Film">
+            <span class="hs-cross">+</span>
+          </button>
+          <div class="hs-card">
+            <div class="hs-label">Lakshmi Mulch Film</div>
+            <div class="hs-spec">Silver-Black 25 Micron · Weed & Evaporation Control</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Layer 4: Station Metrics & Feature Checklist -->
+      <section class="layer l4" id="l4">
+        <div class="station-grid">
+          <div class="station-heading-box">
+            <div class="lime-tag">✕ SUPPLY STATION #07</div>
+            <h3 class="station-h3">Commercial Reliability for Every Farmer</h3>
+          </div>
+
+          <div class="station-card">
+            <div class="sc-head">
+              <h4>Water Conservation Efficiency</h4>
+              <span class="mono sc-sub">Bethamangala Benchmark · 12 Mo</span>
+            </div>
+            <div class="sc-number-row">
+              <span class="sc-num" id="count-water">0</span>
+              <span class="sc-unit">%</span>
+              <span class="sc-badge">+55% SAVINGS</span>
+            </div>
+            
+            <div class="sparkline-wrap">
+              <svg viewBox="0 0 220 70" class="sparkline-svg">
+                <polyline id="sparkline-poly" points="0,60 30,55 60,57 90,44 120,46 150,30 180,24 214,10" fill="none" stroke="#c6f35c" stroke-width="2.2" stroke-linecap="round"/>
+                <circle cx="90" cy="44" r="3" fill="#ffffff"/>
+                <circle cx="150" cy="30" r="3" fill="#ffffff"/>
+                <circle cx="214" cy="10" r="4.5" fill="#c6f35c"/>
+              </svg>
+            </div>
+            <div class="sc-foot mono">FLOW STABILITY: OPTIMAL 2.5 BAR</div>
+          </div>
+
+          <div class="station-features">
+            <div class="feat-row">
+              <span class="f-idx mono">01</span>
+              <span class="f-name">Finolex PVC & CPVC Authorized Lines</span>
+              <span class="f-arr">→</span>
+            </div>
+            <div class="feat-row">
+              <span class="f-idx mono">02</span>
+              <span class="f-name">Kaveri & Nandi Drip Irrigation Laterals</span>
+              <span class="f-arr">→</span>
+            </div>
+            <div class="feat-row">
+              <span class="f-idx mono">03</span>
+              <span class="f-name">Sujay Precision Valves & Compression Fittings</span>
+              <span class="f-arr">→</span>
+            </div>
+            <div class="feat-row">
+              <span class="f-idx mono">04</span>
+              <span class="f-name">Sand, Hydrocyclone & Disc Filter Stations</span>
+              <span class="f-arr">→</span>
+            </div>
+            <div class="feat-row">
+              <span class="f-idx mono">05</span>
+              <span class="f-name">Lakshmi Agri Mulch & Heavy Duty Suction Pipes</span>
+              <span class="f-arr">→</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Pinned Progress Bar -->
+      <div class="prog-bar-wrap">
+        <div class="prog-bar-fill" id="prog-fill"></div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Solutions & Product Showcase Section (Slides up) -->
+  <section class="solutions-section" id="solutions">
+    <div class="sol-container">
+      
+      <div class="sol-header">
+        <div class="sol-head-left">
+          <div class="chip">INVENTORY & SOLUTIONS</div>
+          <h2 class="sol-title">Quality Equipment For Lasting Farm Yields</h2>
+        </div>
+        <div class="sol-head-right">
+          <p>From single-acre vegetable plots to multi-acre estates, Srinidhi Enterprises provides the exact pipes, drippers, filters, and fittings required for flawless water distribution.</p>
+        </div>
+      </div>
+
+      <!-- 3D Tilting Product Cards -->
+      <div class="cards-grid">
+        <!-- Card 1 -->
+        <article class="tilt-card" data-tilt>
+          <div class="card-bg" style="background-image: url('assets/images/hero-field.jpg');"></div>
+          <div class="card-overlay"></div>
+          <div class="card-top">
+            <span class="mono card-tag">[DRIP & SPRINKLERS]</span>
+            <div class="card-arr-btn">↗</div>
+          </div>
+          <div class="card-bottom">
+            <h3 class="card-title">Kaveri & Nandi Drip Systems</h3>
+            <p class="card-desc">Clog-resistant emitters, cylindrical inline drippers, and micro-sprinklers designed for uniform discharge even on sloping terrain.</p>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="tilt-card" data-tilt>
+          <div class="card-bg" style="background-image: url('assets/images/filter-station.jpg');"></div>
+          <div class="card-overlay"></div>
+          <div class="card-top">
+            <span class="mono card-tag">[FILTRATION & PUMPS]</span>
+            <div class="card-arr-btn">↗</div>
+          </div>
+          <div class="card-bottom">
+            <h3 class="card-title">Hydrocyclone & Disc Filtration</h3>
+            <p class="card-desc">Heavy-duty sand separators and screen filters that protect micro-emitters from borewell particles, extending drip line life.</p>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="tilt-card" data-tilt>
+          <div class="card-bg" style="background-image: url('assets/images/mulch-beds.jpg');"></div>
+          <div class="card-overlay"></div>
+          <div class="card-top">
+            <span class="mono card-tag">[MULCH & CROPS]</span>
+            <div class="card-arr-btn">↗</div>
+          </div>
+          <div class="card-bottom">
+            <h3 class="card-title">Lakshmi Mulch & PVC Lines</h3>
+            <p class="card-desc">High-grade agricultural mulch film, Finolex rigid PVC delivery pipes, ribbed suction hoses, and durable knapsack sprayers.</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Interactive Farmer Drip Estimator -->
+      <div class="calculator-wrap" id="calculator">
+        <div class="calc-box">
+          <div class="calc-head">
+            <div class="chip">INSTANT FARM ESTIMATOR</div>
+            <h3 class="calc-title">Calculate Your Irrigation Needs</h3>
+            <p class="calc-sub">Select your crop and farm acreage to get an instant estimated requirement for drip lateral lines and filtration capacity.</p>
+          </div>
+
+          <div class="calc-body">
+            <div class="calc-inputs">
+              <div class="input-group">
+                <label for="crop-type">CROP TYPE</label>
+                <select id="crop-type" class="custom-select">
+                  <option value="vegetables" selected>Vegetables (Tomato, Chilly, Beans) — 1.2m spacing</option>
+                  <option value="mulberry">Mulberry (Sericulture) — 1.5m spacing</option>
+                  <option value="banana">Banana / Papaya — 1.8m spacing</option>
+                  <option value="mango">Mango / Plantation — 5m to 8m spacing</option>
+                  <option value="sugarcane">Sugarcane — 1.4m spacing</option>
+                </select>
+              </div>
+
+              <div class="input-group">
+                <label for="farm-acres">FARM LAND AREA (ACRES)</label>
+                <div class="range-row">
+                  <input type="range" id="farm-acres" min="0.5" max="10" step="0.5" value="1" class="custom-range">
+                  <span class="acres-val mono" id="acres-disp">1.0 Acre</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="calc-results">
+              <div class="res-item">
+                <span class="res-label">ESTIMATED LATERAL PIPE</span>
+                <span class="res-value" id="res-lateral">~3,300 meters</span>
+                <span class="res-note">16mm Kaveri/Nandi Drip</span>
+              </div>
+              <div class="res-item">
+                <span class="res-label">RECOMMENDED FILTER</span>
+                <span class="res-value" id="res-filter">2" Screen/Disc Filter</span>
+                <span class="res-note">25 m³/hr flow rate</span>
+              </div>
+              <div class="res-item">
+                <span class="res-label">MAINLINE PIPE NEEDED</span>
+                <span class="res-value" id="res-mainline">~200 meters</span>
+                <span class="res-note">63mm / 75mm Finolex PVC</span>
+              </div>
+            </div>
+
+            <div class="calc-cta">
+              <a href="#" id="calc-wa-btn" class="whatsapp-quote-btn" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2ZM12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15Z"/>
+                </svg>
+                <span>SEND THIS ESTIMATE TO HARSHA SIR ON WHATSAPP</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statistics Banner -->
+      <div class="stats-row" id="stats-banner">
+        <div class="stat-col">
+          <div class="stat-num" data-val="100">0</div>
+          <div class="stat-lbl mono">% GENUINE FINOLEX & SUJAY</div>
+        </div>
+        <div class="stat-col">
+          <div class="stat-num" data-val="10">0</div>
+          <div class="stat-lbl mono">+ YEARS LOCAL FARMER SERVICE</div>
+        </div>
+        <div class="stat-col">
+          <div class="stat-num" data-val="500">0</div>
+          <div class="stat-lbl mono">+ ACRES IRRIGATED IN KOLAR</div>
+        </div>
+        <div class="stat-col">
+          <div class="stat-num" data-val="60">0</div>
+          <div class="stat-lbl mono">% AVERAGE WATER CONSERVED</div>
+        </div>
+      </div>
+
+      <!-- Shop Location & Direct Contact Section -->
+      <div class="contact-section" id="contact">
+        <div class="contact-card">
+          <div class="contact-info">
+            <div class="chip">VISIT OR CALL US</div>
+            <h2 class="contact-title">Srinidhi Enterprises</h2>
+            <p class="proprietor-tag">Proprietor: <strong>Harsha / Harish Gowda</strong></p>
+
+            <div class="info-list">
+              <div class="info-item">
+                <span class="info-icon">📍</span>
+                <div>
+                  <strong>Address</strong>
+                  <p>#07, Achari Building, K.G.F. Main Road,<br>Bethamangala — 563116, Kolar District, Karnataka</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <span class="info-icon">📞</span>
+                <div>
+                  <strong>Phone / WhatsApp</strong>
+                  <p><a href="tel:9686636755" class="phone-link">+91 9686636755</a></p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <span class="info-icon">✉️</span>
+                <div>
+                  <strong>Email</strong>
+                  <p><a href="mailto:harishgowda.bs@gmail.com" class="email-link">harishgowda.bs@gmail.com</a></p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <span class="info-icon">🕒</span>
+                <div>
+                  <strong>Working Hours</strong>
+                  <p>Monday – Saturday: 8:00 AM – 8:30 PM<br>Sunday: 8:30 AM – 2:00 PM</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="action-buttons-row">
+              <a href="tel:9686636755" class="btn btn-primary">
+                <span>CALL NOW: 9686636755</span>
+              </a>
+              <a href="https://wa.me/919686636755?text=Hello%20Harsha%20sir,%20I%20am%20inquiring%20about%20irrigation%20supplies." target="_blank" rel="noopener" class="btn btn-whatsapp">
+                <span>WHATSAPP US</span>
+              </a>
+              <a href="https://maps.google.com/?q=Bethamangala+KGF+Main+Road+Karnataka" target="_blank" rel="noopener" class="btn btn-secondary">
+                <span>OPEN IN MAPS</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="visiting-card-display">
+            <div class="vc-frame">
+              <img src="assets/images/visiting-card.jpg" alt="Srinidhi Enterprises Visiting Card" class="vc-img" loading="lazy">
+              <div class="vc-caption mono">OFFICIAL SHOP CARD · BETHAMANGALA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-wrap">
+        <div class="f-left">
+          <span class="mono">SRINIDHI ENTERPRISES © 2026 · ALL RIGHTS RESERVED</span>
+        </div>
+        <div class="f-right mono">
+          <span>PRECISION DRIP · FINOLEX PVC · SUJAY FITTINGS · BETHAMANGALA</span>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- Floating Sticky Action Bar for Mobile/Desktop Quick Tap -->
+  <div class="floating-quick-bar">
+    <a href="tel:9686636755" class="quick-call-btn" aria-label="Call Harsha">
+      <span class="icon">📞</span>
+      <span class="txt">Call Harsha</span>
+    </a>
+    <a href="https://wa.me/919686636755?text=Hello%20Harsha%20sir,%20I%20saw%20your%20website%20and%20need%20details%20about%20irrigation%20materials." target="_blank" rel="noopener" class="quick-wa-btn" aria-label="WhatsApp Harsha">
+      <span class="icon">💬</span>
+      <span class="txt">WhatsApp</span>
+    </a>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
