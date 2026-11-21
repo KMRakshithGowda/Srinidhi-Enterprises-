@@ -9,7 +9,7 @@
   <!-- Preconnect to Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+Kannada:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -25,22 +25,28 @@
         </svg>
       </div>
       <div class="logo-text">
-        <span class="brand-name">SRINIDHI</span>
-        <span class="brand-sub">ENTERPRISES</span>
+        <span class="brand-name" data-i18n="brand_name">SRINIDHI</span>
+        <span class="brand-sub" data-i18n="brand_sub">ENTERPRISES</span>
       </div>
     </div>
 
     <nav class="nav-links">
-      <a href="#systems" class="nav-link">SYSTEMS</a>
-      <a href="#hotspots" class="nav-link">TECHNOLOGY</a>
-      <a href="#calculator" class="nav-link">DRIP CALCULATOR</a>
-      <a href="#solutions" class="nav-link">PRODUCTS</a>
-      <a href="#contact" class="nav-link">CONTACT</a>
+      <a href="#systems" class="nav-link" data-i18n="nav_systems">SYSTEMS</a>
+      <a href="#hotspots" class="nav-link" data-i18n="nav_tech">TECHNOLOGY</a>
+      <a href="#calculator" class="nav-link" data-i18n="nav_calc">DRIP CALCULATOR</a>
+      <a href="#solutions" class="nav-link" data-i18n="nav_products">PRODUCTS</a>
+      <a href="#contact" class="nav-link" data-i18n="nav_contact">CONTACT</a>
     </nav>
 
     <div class="nav-cta">
-      <a href="https://wa.me/919686636755?text=Hello%20Harsha%20sir,%20I%20am%20inquiring%20about%20irrigation%20supplies%20from%20your%20website." target="_blank" class="talk-btn" rel="noopener">
-        <span>GET IN TOUCH</span>
+      <!-- Language Switcher: English / ಕನ್ನಡ -->
+      <div class="lang-switch-wrap" role="group" aria-label="Language Selector">
+        <button type="button" class="lang-pill-btn active" id="btn-lang-en" data-lang="en">EN</button>
+        <button type="button" class="lang-pill-btn" id="btn-lang-kn" data-lang="kn">ಕನ್ನಡ</button>
+      </div>
+
+      <a href="https://wa.me/919686636755?text=Hello%20Harish%20sir,%20I%20am%20inquiring%20about%20irrigation%20supplies%20from%20your%20website." target="_blank" class="talk-btn" id="nav-cta-link" rel="noopener">
+        <span data-i18n="nav_cta">GET IN TOUCH</span>
         <div class="arrow-sq">›</div>
       </a>
     </div>
@@ -60,14 +66,14 @@
       <!-- Layer 0: Hero Headline & Kannada Badge -->
       <section class="layer l0" id="l0">
         <div class="hero-copy">
-          <div class="chip">SRINIDHI ENTERPRISES · BETHAMANGALA</div>
+          <div class="chip" data-i18n="hero_chip">SRINIDHI ENTERPRISES · BETHAMANGALA</div>
           <h1 class="hero-h1">
-            <span class="line-wrap"><span class="line-inner">Precision Irrigation</span></span>
-            <span class="line-wrap"><span class="line-inner highlight">For Every Single Drop</span></span>
+            <span class="line-wrap"><span class="line-inner" data-i18n="hero_h1_l1">Precision Irrigation</span></span>
+            <span class="line-wrap"><span class="line-inner highlight" data-i18n="hero_h1_l2">For Every Single Drop</span></span>
           </h1>
           <div class="kannada-badge">
             <span class="k-dot"></span>
-            <span>ಹನಿ ನೀರಾವರಿ ಪದ್ಧತಿಯ ಎಲ್ಲಾ ಗುಣಮಟ್ಟದ ಉಪಕರಣಗಳು ದೊರೆಯುತ್ತವೆ</span>
+            <span data-i18n="hero_badge">ಹನಿ ನೀರಾವರಿ ಪದ್ಧತಿಯ ಎಲ್ಲಾ ಗುಣಮಟ್ಟದ ಉಪಕರಣಗಳು ದೊರೆಯುತ್ತವೆ</span>
           </div>
         </div>
       </section>
@@ -76,15 +82,15 @@
       <section class="layer l1" id="l1">
         <div class="hud-coords">
           <div class="hud-reticle"></div>
-          <div class="chip-sm">BETHAMANGALA HUB</div>
-          <pre class="coord-pre">LAT  13.0039° N
+          <div class="chip-sm" data-i18n="hud_chip">BETHAMANGALA HUB</div>
+          <pre class="coord-pre" data-i18n="hud_coords">LAT  13.0039° N
 LON  78.3242° E
 ELEV 830 M · KOLAR</pre>
         </div>
 
         <div class="hero-caption">
           <div class="caption-border"></div>
-          <p>AUTHORIZED FINOLEX PIPES & SUJAY FITTINGS.<br>
+          <p data-i18n="hero_caption">AUTHORIZED FINOLEX PIPES & SUJAY FITTINGS.<br>
           KAVERI & NANDI PLATINUM DRIP SYSTEMS.<br>
           ENGINEERED FOR RESILIENT AGRICULTURE.</p>
         </div>
@@ -93,42 +99,42 @@ ELEV 830 M · KOLAR</pre>
           <div class="hint-disc">
             <svg viewBox="0 0 16 16" fill="none"><path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
           </div>
-          <span>SCROLL TO EXPLORE</span>
+          <span data-i18n="scroll_hint">SCROLL TO EXPLORE</span>
         </div>
       </section>
 
       <!-- Layer 2: Vision & Live Agro-Weather API Widget -->
       <section class="layer l2" id="l2">
         <div class="vision-block">
-          <div class="chip">LIVE AGRO-TELEMETRY</div>
+          <div class="chip" data-i18n="vision_chip">LIVE AGRO-TELEMETRY</div>
           <h2 class="vision-h2">
-            <span>Water Optimization</span>
-            <span>Meets Local Ground Truth</span>
+            <span data-i18n="vision_h2_l1">Water Optimization</span>
+            <span data-i18n="vision_h2_l2">Meets Local Ground Truth</span>
           </h2>
-          <p class="vision-p">Direct micro-climate data powered by Open-Meteo for farmers across Bethamangala & Kolar district.</p>
+          <p class="vision-p" data-i18n="vision_p">Direct micro-climate data powered by Open-Meteo for farmers across Bethamangala & Kolar district.</p>
           
           <!-- Live Weather & Irrigation Advisory Card -->
           <div class="weather-telemetry-card" id="weather-card">
             <div class="wt-header">
               <span class="pulse-indicator"></span>
-              <span class="wt-title">BETHAMANGALA FIELD CONDITIONS</span>
-              <span class="wt-live mono">LIVE API</span>
+              <span class="wt-title" data-i18n="wt_title">BETHAMANGALA FIELD CONDITIONS</span>
+              <span class="wt-live mono" data-i18n="wt_live">LIVE API</span>
             </div>
             <div class="wt-grid">
               <div class="wt-stat">
-                <span class="wt-label">TEMPERATURE</span>
+                <span class="wt-label" data-i18n="wt_label_temp">TEMPERATURE</span>
                 <span class="wt-val" id="wt-temp">--°C</span>
               </div>
               <div class="wt-stat">
-                <span class="wt-label">HUMIDITY</span>
+                <span class="wt-label" data-i18n="wt_label_hum">HUMIDITY</span>
                 <span class="wt-val" id="wt-humidity">--%</span>
               </div>
               <div class="wt-stat">
-                <span class="wt-label">SOIL EVAPOTRANSPIRATION</span>
+                <span class="wt-label" data-i18n="wt_label_et">SOIL EVAPOTRANSPIRATION</span>
                 <span class="wt-val" id="wt-et">Low Stress</span>
               </div>
               <div class="wt-stat highlight-stat">
-                <span class="wt-label">IRRIGATION ADVISORY</span>
+                <span class="wt-label" data-i18n="wt_label_adv">IRRIGATION ADVISORY</span>
                 <span class="wt-val green-text" id="wt-advisory">Optimal Drip Timing: Early Morning</span>
               </div>
             </div>
@@ -139,7 +145,7 @@ ELEV 830 M · KOLAR</pre>
       <!-- Layer 3: Interactive Hotspots on Irrigation Components -->
       <section class="layer l3" id="l3">
         <div class="acct-wrap">
-          <p class="acct-para">
+          <p class="acct-para" data-i18n="acct_para">
             Engineered micro-irrigation reduces water waste by up to 60%, directing nutrients right to the root zone with zero runoff.
           </p>
         </div>
@@ -150,8 +156,8 @@ ELEV 830 M · KOLAR</pre>
             <span class="hs-cross">+</span>
           </button>
           <div class="hs-card">
-            <div class="hs-label">Kaveri & Nandi Drip Laterals</div>
-            <div class="hs-spec">16mm Inline / Online Emitters · UV Stabilized</div>
+            <div class="hs-label" data-i18n="hs1_title">Kaveri & Nandi Drip Laterals</div>
+            <div class="hs-spec" data-i18n="hs1_spec">16mm Inline / Online Emitters · UV Stabilized</div>
           </div>
         </div>
 
@@ -161,8 +167,8 @@ ELEV 830 M · KOLAR</pre>
             <span class="hs-cross">+</span>
           </button>
           <div class="hs-card">
-            <div class="hs-label">Finolex PVC Pressure Pipes</div>
-            <div class="hs-spec">Class 2/3 Borewell Delivery · Leakproof Sujay Fittings</div>
+            <div class="hs-label" data-i18n="hs2_title">Finolex PVC Pressure Pipes</div>
+            <div class="hs-spec" data-i18n="hs2_spec">Class 2/3 Borewell Delivery · Leakproof Sujay Fittings</div>
           </div>
         </div>
 
@@ -172,8 +178,8 @@ ELEV 830 M · KOLAR</pre>
             <span class="hs-cross">+</span>
           </button>
           <div class="hs-card">
-            <div class="hs-label">Hydrocyclone & Screen Filters</div>
-            <div class="hs-spec">Sand & Silt Extraction · Stops Emitter Clogging</div>
+            <div class="hs-label" data-i18n="hs3_title">Hydrocyclone & Screen Filters</div>
+            <div class="hs-spec" data-i18n="hs3_spec">Sand & Silt Extraction · Stops Emitter Clogging</div>
           </div>
         </div>
 
@@ -183,8 +189,8 @@ ELEV 830 M · KOLAR</pre>
             <span class="hs-cross">+</span>
           </button>
           <div class="hs-card">
-            <div class="hs-label">Lakshmi Mulch Film</div>
-            <div class="hs-spec">Silver-Black 25 Micron · Weed & Evaporation Control</div>
+            <div class="hs-label" data-i18n="hs4_title">Lakshmi Mulch Film</div>
+            <div class="hs-spec" data-i18n="hs4_spec">Silver-Black 25 Micron · Weed & Evaporation Control</div>
           </div>
         </div>
       </section>
@@ -193,19 +199,19 @@ ELEV 830 M · KOLAR</pre>
       <section class="layer l4" id="l4">
         <div class="station-grid">
           <div class="station-heading-box">
-            <div class="lime-tag">✕ SUPPLY STATION #07</div>
-            <h3 class="station-h3">Commercial Reliability for Every Farmer</h3>
+            <div class="lime-tag" data-i18n="lime_tag">✕ SUPPLY STATION #07</div>
+            <h3 class="station-h3" data-i18n="station_h3">Commercial Reliability for Every Farmer</h3>
           </div>
 
           <div class="station-card">
             <div class="sc-head">
-              <h4>Water Conservation Efficiency</h4>
-              <span class="mono sc-sub">Bethamangala Benchmark · 12 Mo</span>
+              <h4 data-i18n="sc_head">Water Conservation Efficiency</h4>
+              <span class="mono sc-sub" data-i18n="sc_sub">Bethamangala Benchmark · 12 Mo</span>
             </div>
             <div class="sc-number-row">
               <span class="sc-num" id="count-water">0</span>
               <span class="sc-unit">%</span>
-              <span class="sc-badge">+55% SAVINGS</span>
+              <span class="sc-badge" data-i18n="sc_badge">+55% SAVINGS</span>
             </div>
             
             <div class="sparkline-wrap">
@@ -216,33 +222,33 @@ ELEV 830 M · KOLAR</pre>
                 <circle cx="214" cy="10" r="4.5" fill="#c6f35c"/>
               </svg>
             </div>
-            <div class="sc-foot mono">FLOW STABILITY: OPTIMAL 2.5 BAR</div>
+            <div class="sc-foot mono" data-i18n="sc_foot">FLOW STABILITY: OPTIMAL 2.5 BAR</div>
           </div>
 
           <div class="station-features">
             <div class="feat-row">
               <span class="f-idx mono">01</span>
-              <span class="f-name">Finolex PVC & CPVC Authorized Lines</span>
+              <span class="f-name" data-i18n="feat_1">Finolex PVC & CPVC Authorized Lines</span>
               <span class="f-arr">→</span>
             </div>
             <div class="feat-row">
               <span class="f-idx mono">02</span>
-              <span class="f-name">Kaveri & Nandi Drip Irrigation Laterals</span>
+              <span class="f-name" data-i18n="feat_2">Kaveri & Nandi Drip Irrigation Laterals</span>
               <span class="f-arr">→</span>
             </div>
             <div class="feat-row">
               <span class="f-idx mono">03</span>
-              <span class="f-name">Sujay Precision Valves & Compression Fittings</span>
+              <span class="f-name" data-i18n="feat_3">Sujay Precision Valves & Compression Fittings</span>
               <span class="f-arr">→</span>
             </div>
             <div class="feat-row">
               <span class="f-idx mono">04</span>
-              <span class="f-name">Sand, Hydrocyclone & Disc Filter Stations</span>
+              <span class="f-name" data-i18n="feat_4">Sand, Hydrocyclone & Disc Filter Stations</span>
               <span class="f-arr">→</span>
             </div>
             <div class="feat-row">
               <span class="f-idx mono">05</span>
-              <span class="f-name">Lakshmi Agri Mulch & Heavy Duty Suction Pipes</span>
+              <span class="f-name" data-i18n="feat_5">Lakshmi Agri Mulch & Heavy Duty Suction Pipes</span>
               <span class="f-arr">→</span>
             </div>
           </div>
@@ -263,11 +269,11 @@ ELEV 830 M · KOLAR</pre>
       
       <div class="sol-header">
         <div class="sol-head-left">
-          <div class="chip">INVENTORY & SOLUTIONS</div>
-          <h2 class="sol-title">Quality Equipment For Lasting Farm Yields</h2>
+          <div class="chip" data-i18n="sol_chip">INVENTORY & SOLUTIONS</div>
+          <h2 class="sol-title" data-i18n="sol_title">Quality Equipment For Lasting Farm Yields</h2>
         </div>
         <div class="sol-head-right">
-          <p>From single-acre vegetable plots to multi-acre estates, Srinidhi Enterprises provides the exact pipes, drippers, filters, and fittings required for flawless water distribution.</p>
+          <p data-i18n="sol_desc">From single-acre vegetable plots to multi-acre estates, Srinidhi Enterprises provides the exact pipes, drippers, filters, and fittings required for flawless water distribution.</p>
         </div>
       </div>
 
@@ -278,12 +284,12 @@ ELEV 830 M · KOLAR</pre>
           <div class="card-bg" style="background-image: url('assets/images/hero-field.jpg');"></div>
           <div class="card-overlay"></div>
           <div class="card-top">
-            <span class="mono card-tag">[DRIP & SPRINKLERS]</span>
+            <span class="mono card-tag" data-i18n="card1_tag">[DRIP & SPRINKLERS]</span>
             <div class="card-arr-btn">↗</div>
           </div>
           <div class="card-bottom">
-            <h3 class="card-title">Kaveri & Nandi Drip Systems</h3>
-            <p class="card-desc">Clog-resistant emitters, cylindrical inline drippers, and micro-sprinklers designed for uniform discharge even on sloping terrain.</p>
+            <h3 class="card-title" data-i18n="card1_title">Kaveri & Nandi Drip Systems</h3>
+            <p class="card-desc" data-i18n="card1_desc">Clog-resistant emitters, cylindrical inline drippers, and micro-sprinklers designed for uniform discharge even on sloping terrain.</p>
           </div>
         </article>
 
@@ -292,12 +298,12 @@ ELEV 830 M · KOLAR</pre>
           <div class="card-bg" style="background-image: url('assets/images/filter-station.jpg');"></div>
           <div class="card-overlay"></div>
           <div class="card-top">
-            <span class="mono card-tag">[FILTRATION & PUMPS]</span>
+            <span class="mono card-tag" data-i18n="card2_tag">[FILTRATION & PUMPS]</span>
             <div class="card-arr-btn">↗</div>
           </div>
           <div class="card-bottom">
-            <h3 class="card-title">Hydrocyclone & Disc Filtration</h3>
-            <p class="card-desc">Heavy-duty sand separators and screen filters that protect micro-emitters from borewell particles, extending drip line life.</p>
+            <h3 class="card-title" data-i18n="card2_title">Hydrocyclone & Disc Filtration</h3>
+            <p class="card-desc" data-i18n="card2_desc">Heavy-duty sand separators and screen filters that protect micro-emitters from borewell particles, extending drip line life.</p>
           </div>
         </article>
 
@@ -306,12 +312,12 @@ ELEV 830 M · KOLAR</pre>
           <div class="card-bg" style="background-image: url('assets/images/mulch-beds.jpg');"></div>
           <div class="card-overlay"></div>
           <div class="card-top">
-            <span class="mono card-tag">[MULCH & CROPS]</span>
+            <span class="mono card-tag" data-i18n="card3_tag">[MULCH & CROPS]</span>
             <div class="card-arr-btn">↗</div>
           </div>
           <div class="card-bottom">
-            <h3 class="card-title">Lakshmi Mulch & PVC Lines</h3>
-            <p class="card-desc">High-grade agricultural mulch film, Finolex rigid PVC delivery pipes, ribbed suction hoses, and durable knapsack sprayers.</p>
+            <h3 class="card-title" data-i18n="card3_title">Lakshmi Mulch & PVC Lines</h3>
+            <p class="card-desc" data-i18n="card3_desc">High-grade agricultural mulch film, Finolex rigid PVC delivery pipes, ribbed suction hoses, and durable knapsack sprayers.</p>
           </div>
         </article>
       </div>
@@ -320,26 +326,26 @@ ELEV 830 M · KOLAR</pre>
       <div class="calculator-wrap" id="calculator">
         <div class="calc-box">
           <div class="calc-head">
-            <div class="chip">INSTANT FARM ESTIMATOR</div>
-            <h3 class="calc-title">Calculate Your Irrigation Needs</h3>
-            <p class="calc-sub">Select your crop and farm acreage to get an instant estimated requirement for drip lateral lines and filtration capacity.</p>
+            <div class="chip" data-i18n="calc_chip">INSTANT FARM ESTIMATOR</div>
+            <h3 class="calc-title" data-i18n="calc_title">Calculate Your Irrigation Needs</h3>
+            <p class="calc-sub" data-i18n="calc_sub">Select your crop and farm acreage to get an instant estimated requirement for drip lateral lines and filtration capacity.</p>
           </div>
 
           <div class="calc-body">
             <div class="calc-inputs">
               <div class="input-group">
-                <label for="crop-type">CROP TYPE</label>
+                <label for="crop-type" data-i18n="label_crop">CROP TYPE</label>
                 <select id="crop-type" class="custom-select">
-                  <option value="vegetables" selected>Vegetables (Tomato, Chilly, Beans) — 1.2m spacing</option>
-                  <option value="mulberry">Mulberry (Sericulture) — 1.5m spacing</option>
-                  <option value="banana">Banana / Papaya — 1.8m spacing</option>
-                  <option value="mango">Mango / Plantation — 5m to 8m spacing</option>
-                  <option value="sugarcane">Sugarcane — 1.4m spacing</option>
+                  <option value="vegetables" selected data-i18n-opt="opt_veg">Vegetables (Tomato, Chilly, Beans) — 1.2m spacing</option>
+                  <option value="mulberry" data-i18n-opt="opt_mul">Mulberry (Sericulture) — 1.5m spacing</option>
+                  <option value="banana" data-i18n-opt="opt_ban">Banana / Papaya — 1.8m spacing</option>
+                  <option value="mango" data-i18n-opt="opt_man">Mango / Plantation — 5m to 8m spacing</option>
+                  <option value="sugarcane" data-i18n-opt="opt_sug">Sugarcane — 1.4m spacing</option>
                 </select>
               </div>
 
               <div class="input-group">
-                <label for="farm-acres">FARM LAND AREA (ACRES)</label>
+                <label for="farm-acres" data-i18n="label_acres">FARM LAND AREA (ACRES)</label>
                 <div class="range-row">
                   <input type="range" id="farm-acres" min="0.5" max="10" step="0.5" value="1" class="custom-range">
                   <span class="acres-val mono" id="acres-disp">1.0 Acre</span>
@@ -349,19 +355,19 @@ ELEV 830 M · KOLAR</pre>
 
             <div class="calc-results">
               <div class="res-item">
-                <span class="res-label">ESTIMATED LATERAL PIPE</span>
+                <span class="res-label" data-i18n="res_lateral_lbl">ESTIMATED LATERAL PIPE</span>
                 <span class="res-value" id="res-lateral">~3,300 meters</span>
-                <span class="res-note">16mm Kaveri/Nandi Drip</span>
+                <span class="res-note" data-i18n="res_lateral_note">16mm Kaveri/Nandi Drip</span>
               </div>
               <div class="res-item">
-                <span class="res-label">RECOMMENDED FILTER</span>
+                <span class="res-label" data-i18n="res_filter_lbl">RECOMMENDED FILTER</span>
                 <span class="res-value" id="res-filter">2" Screen/Disc Filter</span>
-                <span class="res-note">25 m³/hr flow rate</span>
+                <span class="res-note" id="res-filter-note">25 m³/hr flow rate</span>
               </div>
               <div class="res-item">
-                <span class="res-label">MAINLINE PIPE NEEDED</span>
+                <span class="res-label" data-i18n="res_mainline_lbl">MAINLINE PIPE NEEDED</span>
                 <span class="res-value" id="res-mainline">~200 meters</span>
-                <span class="res-note">63mm / 75mm Finolex PVC</span>
+                <span class="res-note" data-i18n="res_mainline_note">63mm / 75mm Finolex PVC</span>
               </div>
             </div>
 
@@ -370,7 +376,7 @@ ELEV 830 M · KOLAR</pre>
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                   <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2ZM12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15Z"/>
                 </svg>
-                <span>SEND THIS ESTIMATE TO HARSHA SIR ON WHATSAPP</span>
+                <span data-i18n="calc_wa_text">SEND THIS ESTIMATE TO HARISH SIR ON WHATSAPP</span>
               </a>
             </div>
           </div>
@@ -381,19 +387,19 @@ ELEV 830 M · KOLAR</pre>
       <div class="stats-row" id="stats-banner">
         <div class="stat-col">
           <div class="stat-num" data-val="100">0</div>
-          <div class="stat-lbl mono">% GENUINE FINOLEX & SUJAY</div>
+          <div class="stat-lbl mono" data-i18n="stat_1">% GENUINE FINOLEX & SUJAY</div>
         </div>
         <div class="stat-col">
           <div class="stat-num" data-val="10">0</div>
-          <div class="stat-lbl mono">+ YEARS LOCAL FARMER SERVICE</div>
+          <div class="stat-lbl mono" data-i18n="stat_2">+ YEARS LOCAL FARMER SERVICE</div>
         </div>
         <div class="stat-col">
           <div class="stat-num" data-val="500">0</div>
-          <div class="stat-lbl mono">+ ACRES IRRIGATED IN KOLAR</div>
+          <div class="stat-lbl mono" data-i18n="stat_3">+ ACRES IRRIGATED IN KOLAR</div>
         </div>
         <div class="stat-col">
           <div class="stat-num" data-val="60">0</div>
-          <div class="stat-lbl mono">% AVERAGE WATER CONSERVED</div>
+          <div class="stat-lbl mono" data-i18n="stat_4">% AVERAGE WATER CONSERVED</div>
         </div>
       </div>
 
@@ -401,23 +407,23 @@ ELEV 830 M · KOLAR</pre>
       <div class="contact-section" id="contact">
         <div class="contact-card">
           <div class="contact-info">
-            <div class="chip">VISIT OR CALL US</div>
-            <h2 class="contact-title">Srinidhi Enterprises</h2>
-            <p class="proprietor-tag">Proprietor: <strong>Harsha / Harish Gowda</strong></p>
+            <div class="chip" data-i18n="contact_chip">VISIT OR CALL US</div>
+            <h2 class="contact-title" data-i18n="contact_title">Srinidhi Enterprises</h2>
+            <p class="proprietor-tag"><span data-i18n="proprietor_label">Proprietor:</span> <strong>Harish Gowda B.S</strong></p>
 
             <div class="info-list">
               <div class="info-item">
                 <span class="info-icon">📍</span>
                 <div>
-                  <strong>Address</strong>
-                  <p>#07, Achari Building, K.G.F. Main Road,<br>Bethamangala — 563116, Kolar District, Karnataka</p>
+                  <strong data-i18n="info_addr_label">Address</strong>
+                  <p data-i18n="info_addr_val">#07, Achari Building, K.G.F. Main Road,<br>Bethamangala — 563116, Kolar District, Karnataka</p>
                 </div>
               </div>
 
               <div class="info-item">
                 <span class="info-icon">📞</span>
                 <div>
-                  <strong>Phone / WhatsApp</strong>
+                  <strong data-i18n="info_phone_label">Phone / WhatsApp</strong>
                   <p><a href="tel:9686636755" class="phone-link">+91 9686636755</a></p>
                 </div>
               </div>
@@ -425,7 +431,7 @@ ELEV 830 M · KOLAR</pre>
               <div class="info-item">
                 <span class="info-icon">✉️</span>
                 <div>
-                  <strong>Email</strong>
+                  <strong data-i18n="info_email_label">Email</strong>
                   <p><a href="mailto:harishgowda.bs@gmail.com" class="email-link">harishgowda.bs@gmail.com</a></p>
                 </div>
               </div>
@@ -433,21 +439,21 @@ ELEV 830 M · KOLAR</pre>
               <div class="info-item">
                 <span class="info-icon">🕒</span>
                 <div>
-                  <strong>Working Hours</strong>
-                  <p>Monday – Saturday: 8:00 AM – 8:30 PM<br>Sunday: 8:30 AM – 2:00 PM</p>
+                  <strong data-i18n="info_hours_label">Working Hours</strong>
+                  <p data-i18n="info_hours_val">Monday – Saturday: 8:00 AM – 8:30 PM<br>Sunday: 8:30 AM – 2:00 PM</p>
                 </div>
               </div>
             </div>
 
             <div class="action-buttons-row">
               <a href="tel:9686636755" class="btn btn-primary">
-                <span>CALL NOW: 9686636755</span>
+                <span data-i18n="btn_call">CALL NOW: 9686636755</span>
               </a>
-              <a href="https://wa.me/919686636755?text=Hello%20Harsha%20sir,%20I%20am%20inquiring%20about%20irrigation%20supplies." target="_blank" rel="noopener" class="btn btn-whatsapp">
-                <span>WHATSAPP US</span>
+              <a href="https://wa.me/919686636755?text=Hello%20Harish%20sir,%20I%20am%20inquiring%20about%20irrigation%20supplies." target="_blank" rel="noopener" class="btn btn-whatsapp">
+                <span data-i18n="btn_whatsapp">WHATSAPP US</span>
               </a>
-              <a href="https://maps.google.com/?q=Bethamangala+KGF+Main+Road+Karnataka" target="_blank" rel="noopener" class="btn btn-secondary">
-                <span>OPEN IN MAPS</span>
+              <a href="https://maps.app.goo.gl/oZA9ZfsVM6ARroRq9" target="_blank" rel="noopener" class="btn btn-secondary">
+                <span data-i18n="btn_maps">OPEN IN MAPS</span>
               </a>
             </div>
           </div>
@@ -455,7 +461,7 @@ ELEV 830 M · KOLAR</pre>
           <div class="visiting-card-display">
             <div class="vc-frame">
               <img src="assets/images/visiting-card.jpg" alt="Srinidhi Enterprises Visiting Card" class="vc-img" loading="lazy">
-              <div class="vc-caption mono">OFFICIAL SHOP CARD · BETHAMANGALA</div>
+              <div class="vc-caption mono" data-i18n="vc_caption">OFFICIAL SHOP CARD · BETHAMANGALA</div>
             </div>
           </div>
         </div>
@@ -467,26 +473,14 @@ ELEV 830 M · KOLAR</pre>
     <footer class="site-footer">
       <div class="footer-wrap">
         <div class="f-left">
-          <span class="mono">SRINIDHI ENTERPRISES © 2026 · ALL RIGHTS RESERVED</span>
+          <span class="mono" data-i18n="footer_left">SRINIDHI ENTERPRISES © 2026 · ALL RIGHTS RESERVED</span>
         </div>
-        <div class="f-right mono">
+        <div class="f-right mono" data-i18n="footer_right">
           <span>PRECISION DRIP · FINOLEX PVC · SUJAY FITTINGS · BETHAMANGALA</span>
         </div>
       </div>
     </footer>
   </section>
-
-  <!-- Floating Sticky Action Bar for Mobile/Desktop Quick Tap -->
-  <div class="floating-quick-bar">
-    <a href="tel:9686636755" class="quick-call-btn" aria-label="Call Harsha">
-      <span class="icon">📞</span>
-      <span class="txt">Call Harsha</span>
-    </a>
-    <a href="https://wa.me/919686636755?text=Hello%20Harsha%20sir,%20I%20saw%20your%20website%20and%20need%20details%20about%20irrigation%20materials." target="_blank" rel="noopener" class="quick-wa-btn" aria-label="WhatsApp Harsha">
-      <span class="icon">💬</span>
-      <span class="txt">WhatsApp</span>
-    </a>
-  </div>
 
   <script src="app.js"></script>
 </body>
