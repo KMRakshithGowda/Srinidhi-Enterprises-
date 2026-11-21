@@ -724,6 +724,35 @@
     observer.observe(statsBanner);
   }
 
+  // --- Navigation Link Smooth Scroll Handlers ---
+  document.querySelectorAll('a[href^="#"], a[data-nav]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      const navTarget = link.getAttribute('data-nav') || link.getAttribute('href').replace('#', '');
+      if (!navTarget) return;
+
+      e.preventDefault();
+
+      if (navTarget === 'systems') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (navTarget === 'technology' || navTarget === 'hotspots') {
+        if (story) {
+          const storyScrollable = story.offsetHeight - window.innerHeight;
+          const targetY = story.offsetTop + storyScrollable * 0.48;
+          window.scrollTo({ top: targetY, behavior: 'smooth' });
+        }
+      } else if (navTarget === 'solutions' || navTarget === 'products') {
+        const el = document.getElementById('solutions');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      } else if (navTarget === 'calculator') {
+        const el = document.getElementById('calculator');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      } else if (navTarget === 'contact') {
+        const el = document.getElementById('contact');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
   // --- Language Selector Buttons Event Listeners ---
   const btnEn = document.getElementById('btn-lang-en');
   const btnKn = document.getElementById('btn-lang-kn');

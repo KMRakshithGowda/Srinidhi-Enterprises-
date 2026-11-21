@@ -52,15 +52,26 @@ html[lang="kn"] {
 }
 
 html[lang="kn"] .hero-h1 {
-  font-size: clamp(32px, 5.2vw, 72px);
-  line-height: 1.15;
-  letter-spacing: -0.01em;
+  font-size: clamp(28px, 4.8vw, 64px);
+  line-height: 1.45;
+  letter-spacing: 0;
+  padding: 10px 0;
+}
+
+html[lang="kn"] .line-wrap {
+  overflow: visible !important;
+  padding: 0.2em 0.05em !important;
+}
+
+html[lang="kn"] .line-inner {
+  display: inline-block;
+  padding: 0.08em 0;
 }
 
 html[lang="kn"] .vision-h2,
 html[lang="kn"] .sol-title,
 html[lang="kn"] .contact-title {
-  line-height: 1.2;
+  line-height: 1.35;
   letter-spacing: normal;
 }
 
@@ -136,9 +147,23 @@ a {
 }
 
 .logo-mark {
-  width: 28px;
-  height: 28px;
-  color: #ffffff;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 0 12px rgba(198, 243, 92, 0.4);
+  flex-shrink: 0;
+}
+
+.brand-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .logo-text {
@@ -349,10 +374,10 @@ a {
 }
 
 .hero-h1 {
-  font-size: clamp(38px, 6.2vw, 84px);
+  font-size: clamp(36px, 5.8vw, 80px);
   font-weight: 600;
-  line-height: 0.96;
-  letter-spacing: -0.04em;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
   color: #ffffff;
   margin-top: 20px;
   text-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
@@ -360,8 +385,8 @@ a {
 
 .line-wrap {
   display: block;
-  overflow: hidden;
-  padding-bottom: 0.04em;
+  overflow: visible;
+  padding: 0.12em 0.04em;
 }
 
 .line-inner {
