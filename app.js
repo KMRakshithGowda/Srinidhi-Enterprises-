@@ -22,7 +22,7 @@
       hero_chip: 'SRINIDHI ENTERPRISES · BETHAMANGALA',
       hero_h1_l1: 'Precision Irrigation',
       hero_h1_l2: 'For Every Single Drop',
-      hero_badge: 'ಹನಿ ನೀರಾವರಿ ಪದ್ಧತಿಯ ಎಲ್ಲಾ ಗುಣಮಟ್ಟದ ಉಪಕರಣಗಳು ದೊರೆಯುತ್ತವೆ',
+      hero_badge: 'All Branded Precision Drip Irrigation Equipment Available',
       
       dock_title: 'SYSTEM ESSENTIALS · 3 KEY PILLARS',
       dock_tap_view: 'TAP TO VIEW',
