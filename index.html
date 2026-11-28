@@ -73,6 +73,63 @@
             <span class="k-dot"></span>
             <span data-i18n="hero_badge">ಹನಿ ನೀರಾವರಿ ಪದ್ಧತಿಯ ಎಲ್ಲಾ ಗುಣಮಟ್ಟದ ಉಪಕರಣಗಳು ದೊರೆಯುತ್ತವೆ</span>
           </div>
+
+          <!-- 3 Visual Pillars Showcase Dock (System Layout, Field Action, Accessories) -->
+          <div class="hero-showcase-dock" id="hero-dock">
+            <div class="dock-header">
+              <span class="dock-pulse"></span>
+              <span class="dock-title mono" data-i18n="dock_title">SYSTEM ESSENTIALS · 3 KEY PILLARS</span>
+            </div>
+            <div class="dock-cards-row">
+              <!-- Card 1: Layout Diagram -->
+              <div class="dock-card" data-modal="layout" tabindex="0" role="button" aria-label="View Drip Irrigation System Layout">
+                <div class="dock-thumb">
+                  <img src="assets/images/farm-layout.jpg" alt="Drip Irrigation System Layout" loading="eager">
+                  <div class="dock-zoom-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                    <span data-i18n="dock_tap_view">TAP TO VIEW</span>
+                  </div>
+                </div>
+                <div class="dock-info">
+                  <span class="dock-tag mono" data-i18n="dock_tag_1">01 · BLUEPRINT</span>
+                  <h4 data-i18n="dock_title_1">Complete System Layout</h4>
+                  <p data-i18n="dock_sub_1">Borewell · Filters · Venturi · Mainline · Lateral Lines</p>
+                </div>
+              </div>
+
+              <!-- Card 2: Field in Action -->
+              <div class="dock-card" data-modal="action" tabindex="0" role="button" aria-label="View Root-Zone Drip in Field">
+                <div class="dock-thumb">
+                  <img src="assets/images/farm-field-action.jpg" alt="Drip Lines in Crop Field" loading="eager">
+                  <div class="dock-zoom-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                    <span data-i18n="dock_tap_view">TAP TO VIEW</span>
+                  </div>
+                </div>
+                <div class="dock-info">
+                  <span class="dock-tag mono" data-i18n="dock_tag_2">02 · ON-FIELD ACTION</span>
+                  <h4 data-i18n="dock_title_2">Root-Zone Delivery</h4>
+                  <p data-i18n="dock_sub_2">Uniform discharge straight to roots with zero wastage</p>
+                </div>
+              </div>
+
+              <!-- Card 3: Accessories & Fittings -->
+              <div class="dock-card" data-modal="accessories" tabindex="0" role="button" aria-label="View Drip Accessories & Hardware">
+                <div class="dock-thumb">
+                  <img src="assets/images/farm-accessories.jpg" alt="Drip Fittings & Hardware Kit" loading="eager">
+                  <div class="dock-zoom-pill">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                    <span data-i18n="dock_tap_view">TAP TO VIEW</span>
+                  </div>
+                </div>
+                <div class="dock-info">
+                  <span class="dock-tag mono" data-i18n="dock_tag_3">03 · SHOP ACCESSORIES</span>
+                  <h4 data-i18n="dock_title_3">Fittings & Micro-Tubes</h4>
+                  <p data-i18n="dock_sub_3">Drippers · Mini Valves · Take-offs · Joiners & Coils</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -479,6 +536,21 @@ ELEV 830 M · KOLAR</pre>
       </div>
     </footer>
   </section>
+
+  <!-- High-Res Visual Lightbox Modal for Starting Visual Pillars -->
+  <div class="visual-modal-backdrop" id="visual-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" id="modal-close" aria-label="Close Preview">✕</button>
+      <div class="modal-media-frame">
+        <img id="modal-img" src="assets/images/farm-layout.jpg" alt="Drip System Preview">
+      </div>
+      <div class="modal-caption-bar">
+        <div class="modal-badge mono" id="modal-tag">01 · BLUEPRINT</div>
+        <h3 id="modal-title">Complete Drip Irrigation System Layout</h3>
+        <p id="modal-desc">Detailed diagram showing water flow from tank, sand/screen filtration, mainline PVC, and lateral drippers.</p>
+      </div>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>

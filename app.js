@@ -24,6 +24,18 @@
       hero_h1_l2: 'For Every Single Drop',
       hero_badge: 'ಹನಿ ನೀರಾವರಿ ಪದ್ಧತಿಯ ಎಲ್ಲಾ ಗುಣಮಟ್ಟದ ಉಪಕರಣಗಳು ದೊರೆಯುತ್ತವೆ',
       
+      dock_title: 'SYSTEM ESSENTIALS · 3 KEY PILLARS',
+      dock_tap_view: 'TAP TO VIEW',
+      dock_tag_1: '01 · BLUEPRINT',
+      dock_title_1: 'Complete System Layout',
+      dock_sub_1: 'Borewell · Filters · Venturi · Mainline · Lateral Lines',
+      dock_tag_2: '02 · ON-FIELD ACTION',
+      dock_title_2: 'Root-Zone Delivery',
+      dock_sub_2: 'Uniform discharge straight to roots with zero wastage',
+      dock_tag_3: '03 · SHOP ACCESSORIES',
+      dock_title_3: 'Fittings & Micro-Tubes',
+      dock_sub_3: 'Drippers · Mini Valves · Take-offs · Joiners & Coils',
+      
       hud_chip: 'BETHAMANGALA HUB',
       hud_coords: 'LAT  13.0039° N\nLON  78.3242° E\nELEV 830 M · KOLAR',
       hero_caption: 'AUTHORIZED FINOLEX PIPES & SUJAY FITTINGS.<br>KAVERI & NANDI PLATINUM DRIP SYSTEMS.<br>ENGINEERED FOR RESILIENT AGRICULTURE.',
@@ -132,6 +144,18 @@
       hero_h1_l1: 'ಪ್ರತಿ ಹನಿ ನೀರಿಗೂ',
       hero_h1_l2: 'ನಿಖರವಾದ ಹನಿ ನೀರಾವರಿ',
       hero_badge: 'ಗುಣಮಟ್ಟದ ಬ್ರಾಂಡೆಡ್ ಹನಿ ನೀರಾವರಿ ಉಪಕರಣಗಳು ಲಭ್ಯವಿದೆ',
+
+      dock_title: 'ಹನಿ ನೀರಾವರಿಯ 3 ಮುಖ್ಯ ಹಂತಗಳು · ಮುನ್ನೋಟ',
+      dock_tap_view: 'ದೊಡ್ಡದಾಗಿ ನೋಡಿ',
+      dock_tag_1: '01 · ನೀಲನಕ್ಷೆ',
+      dock_title_1: 'ಸಂಪೂರ್ಣ ವ್ಯವಸ್ಥೆಯ ವಿನ್ಯಾಸ',
+      dock_sub_1: 'ಬೋರ್‌ವೆಲ್ · ಫಿಲ್ಟರ್‌ಗಳು · ವೆಂಚುರಿ · ಮೇನ್‌ಲೈನ್ · ಡ್ರಿಪ್ ಪೈಪ್',
+      dock_tag_2: '02 · ಜಮೀನಿನಲ್ಲಿ ಕಾರ್ಯರೂಪ',
+      dock_title_2: 'ಬೇರುಗಳಿಗೆ ನೇರ ನೀರುಣಿಸುವಿಕೆ',
+      dock_sub_2: 'ನೀರು ಪೋಲಾಗದೆ ಗಿಡದ ಬುಡಕ್ಕೆ ಹನಿ ಹನಿಯಾಗಿ ನೀರು',
+      dock_tag_3: '03 · ಅಂಗಡಿಯ ಬಿಡಿಭಾಗಗಳು',
+      dock_title_3: 'ಡ್ರಿಪ್ಪರ್‌ಗಳು & ಫಿಟ್ಟಿಂಗ್ ಕಿಟ್',
+      dock_sub_3: 'ಡ್ರಿಪ್ಪರ್‌ಗಳು · ವಾಲ್ವ್‌ಗಳು · ಕನೆಕ್ಟರ್‌ಗಳು · ಪೈಪ್ ಕಾಯಿಲ್',
 
       hud_chip: 'ಬೆತ್ತಮಂಗಲ ಕೇಂದ್ರ',
       hud_coords: 'ಅಕ್ಷಾಂಶ 13.0039° N\nರೇಖಾಂಶ 78.3242° E\nಎತ್ತರ 830 ಮೀ · ಕೋಲಾರ',
@@ -751,6 +775,94 @@
         if (el) el.scrollIntoView({ behavior: 'smooth' });
       }
     });
+  });
+
+  // --- Visual Lightbox Modal for 3 Starting Visual Pillars ---
+  const modalData = {
+    layout: {
+      img: 'assets/images/farm-layout-hd.jpg',
+      tagEn: '01 · SYSTEM BLUEPRINT',
+      tagKn: '01 · ವ್ಯವಸ್ಥೆಯ ಸಂಪೂರ್ಣ ನೀಲನಕ್ಷೆ',
+      titleEn: 'Complete Drip Irrigation System Layout',
+      titleKn: 'ಸಂಪೂರ್ಣ ಹನಿ ನೀರಾವರಿ ಪದ್ಧತಿಯ ವಿನ್ಯಾಸ',
+      descEn: 'Engineering diagram illustrating water flow from borewell/tank, bypass valve, sand separator hydro-cyclone, sand & screen filtration, pressure gauge, venturi fertilizer injector, PVC mainline, and lateral drippers.',
+      descKn: 'ಬೋರ್‌ವೆಲ್ ಅಥವಾ ನೀರಿನ ತೊಟ್ಟಿಯಿಂದ ನೀರು ಸರಬರಾಜು, ಬೈಪಾಸ್ ವಾಲ್ವ್, ಮರಳು ಪ್ರತ್ಯೇಕಿಸುವ ಹೈಡ್ರೋಸೈಕ್ಲೋನ್, ಸ್ಯಾಂಡ್ ಮತ್ತು ಸ್ಕ್ರೀನ್ ಫಿಲ್ಟರ್, ವೆಂಚುರಿ ಗೊಬ್ಬರ ಇಂಜೆಕ್ಟರ್, ಮುಖ್ಯ ಪಿವಿಸಿ ಪೈಪ್ ಹಾಗೂ ಗಿಡಗಳ ಸಾಲಿಗೆ ಹರಿಯುವ ಡ್ರಿಪ್ ಲೈನ್‌ಗಳ ಸಂಪೂರ್ಣ ನೀಲನಕ್ಷೆ.'
+    },
+    action: {
+      img: 'assets/images/farm-field-action.jpg',
+      tagEn: '02 · ON-FIELD ACTION',
+      tagKn: '02 · ಜಮೀನಿನಲ್ಲಿ ನೈಜ ಕಾರ್ಯರೂಪ',
+      titleEn: 'Precision Drip in Real Field Action',
+      titleKn: 'ಜಮೀನಿನಲ್ಲಿ ಹನಿ ನೀರಾವರಿ ಕಾರ್ಯವಿಧಾನ',
+      descEn: 'Visual demonstration of lateral drip tubes placed along crop rows in agricultural soil, delivering targeted, uniform water droplets directly to the root zone with zero surface runoff.',
+      descKn: 'ಕೃಷಿ ಭೂಮಿಯಲ್ಲಿ ಗಿಡಗಳ ಸಾಲಿಗೆ ಅಳವಡಿಸಲಾದ ಡ್ರಿಪ್ ಪೈಪ್‌ಗಳಿಂದ ನೀರು ಮತ್ತು ಪೋಷಕಾಂಶಗಳು ನೇರವಾಗಿ ಗಿಡದ ಬೇರುಗಳಿಗೆ ಹನಿ ಹನಿಯಾಗಿ ತಲುಪುವ ನೈಜ ಕೃಷಿ ದೃಶ್ಯ.'
+    },
+    accessories: {
+      img: 'assets/images/farm-accessories-hd.jpg',
+      tagEn: '03 · ALL SHOP ACCESSORIES',
+      tagKn: '03 · ಶ್ರೀನಿಧಿ ಅಂಗಡಿಯ ಎಲ್ಲಾ ಬಿಡಿಭಾಗಗಳು',
+      titleEn: 'Micro-Irrigation Fittings & Hardware Kit',
+      titleKn: 'ಅಗತ್ಯ ಡ್ರಿಪ್ ಬಿಡಿಭಾಗಗಳು ಮತ್ತು ಫಿಟ್ಟಿಂಗ್ಸ್',
+      descEn: 'Extensive inventory ready at Srinidhi Enterprises: inline/online drippers, micro control valves, joiners, tees, end plugs, punch tools, and durable lateral coils for any crop layout.',
+      descKn: 'ಶ್ರೀನಿಧಿ ಎಂಟರ್‌ಪ್ರೈಸಸ್ ಬೆತ್ತಮಂಗಲ ಅಂಗಡಿಯಲ್ಲಿ ಸದಾ ಲಭ್ಯವಿರುವ ಉಪಕರಣಗಳು: ಇನ್‌ಲೈನ್/ಆನ್‌ಲೈನ್ ಡ್ರಿಪ್ಪರ್‌ಗಳು, ಮಿನಿ ಬಾಲ್ ವಾಲ್ವ್‌ಗಳು, ಟೀ, ಜಾಯಿನರ್‌ಗಳು, ಎಂಡ್ ಕ್ಯಾಪ್‌ಗಳು, ಪಂಚ್ ಟೂಲ್‌ಗಳು ಮತ್ತು 16mm ಡ್ರಿಪ್ ಕಾಯಿಲ್‌ಗಳು.'
+    }
+  };
+
+  const visualModal = document.getElementById('visual-modal');
+  const modalImg = document.getElementById('modal-img');
+  const modalTag = document.getElementById('modal-tag');
+  const modalTitle = document.getElementById('modal-title');
+  const modalDesc = document.getElementById('modal-desc');
+  const modalClose = document.getElementById('modal-close');
+
+  function openModal(key) {
+    const data = modalData[key];
+    if (!data || !visualModal) return;
+
+    const isKn = currentLang === 'kn';
+    if (modalImg) modalImg.src = data.img;
+    if (modalTag) modalTag.textContent = isKn ? data.tagKn : data.tagEn;
+    if (modalTitle) modalTitle.textContent = isKn ? data.titleKn : data.titleEn;
+    if (modalDesc) modalDesc.textContent = isKn ? data.descKn : data.descEn;
+
+    visualModal.classList.add('active');
+    visualModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    if (!visualModal) return;
+    visualModal.classList.remove('active');
+    visualModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.dock-card').forEach((card) => {
+    card.addEventListener('click', () => {
+      const modalKey = card.getAttribute('data-modal');
+      openModal(modalKey);
+    });
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const modalKey = card.getAttribute('data-modal');
+        openModal(modalKey);
+      }
+    });
+  });
+
+  if (modalClose) {
+    modalClose.addEventListener('click', closeModal);
+  }
+  if (visualModal) {
+    visualModal.addEventListener('click', (e) => {
+      if (e.target === visualModal) closeModal();
+    });
+  }
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && visualModal && visualModal.classList.contains('active')) {
+      closeModal();
+    }
   });
 
   // --- Language Selector Buttons Event Listeners ---
