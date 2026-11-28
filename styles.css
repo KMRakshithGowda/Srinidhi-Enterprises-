@@ -475,6 +475,26 @@ a {
   color: var(--lime);
 }
 
+@keyframes dockCardSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(22px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pillPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(198, 243, 92, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(198, 243, 92, 0);
+  }
+}
+
 .dock-cards-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -483,7 +503,8 @@ a {
 }
 
 .dock-card {
-  background: rgba(10, 24, 15, 0.72);
+  position: relative;
+  background: rgba(10, 24, 15, 0.78);
   border: 1px solid rgba(198, 243, 92, 0.22);
   border-radius: 12px;
   overflow: hidden;
@@ -491,22 +512,59 @@ a {
   -webkit-backdrop-filter: blur(16px);
   cursor: pointer;
   text-align: left;
-  transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.25s ease, box-shadow 0.28s ease;
+  transition: transform 0.32s cubic-bezier(0.2, 0.9, 0.3, 1.2),
+              border-color 0.28s ease,
+              box-shadow 0.32s ease,
+              background 0.28s ease;
   outline: none;
+  animation: dockCardSlideUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.dock-card:nth-child(1) { animation-delay: 0.1s; }
+.dock-card:nth-child(2) { animation-delay: 0.22s; }
+.dock-card:nth-child(3) { animation-delay: 0.34s; }
+
+/* Kinetic diagonal light-sheen sweep across cards on hover */
+.dock-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -130%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(198, 243, 92, 0.03) 25%,
+    rgba(198, 243, 92, 0.24) 50%,
+    rgba(198, 243, 92, 0.03) 75%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+  z-index: 5;
+  transition: none;
+}
+
+.dock-card:hover::before {
+  left: 170%;
+  transition: left 0.85s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .dock-card:hover, .dock-card:focus-visible {
-  transform: translateY(-4px) scale(1.02);
+  transform: translateY(-6px) scale(1.025);
   border-color: var(--lime);
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.5), 0 0 16px rgba(198, 243, 92, 0.25);
+  background: rgba(14, 34, 21, 0.88);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55), 0 0 22px rgba(198, 243, 92, 0.3);
 }
 
 .dock-thumb {
   position: relative;
   width: 100%;
-  height: 105px;
+  height: 110px;
   overflow: hidden;
-  background: #08140c;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(198, 243, 92, 0.2);
 }
 
 .dock-thumb img {
@@ -514,11 +572,12 @@ a {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: transform 0.65s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.35s ease;
 }
 
 .dock-card:hover .dock-thumb img {
-  transform: scale(1.09);
+  transform: scale(1.08);
+  filter: contrast(1.04) brightness(1.02);
 }
 
 .dock-zoom-pill {
@@ -530,7 +589,7 @@ a {
   gap: 4px;
   padding: 3px 8px;
   border-radius: 14px;
-  background: rgba(8, 20, 12, 0.88);
+  background: rgba(8, 20, 12, 0.9);
   border: 1px solid rgba(198, 243, 92, 0.35);
   color: var(--lime);
   font-family: var(--mono);
@@ -538,7 +597,9 @@ a {
   font-weight: 600;
   letter-spacing: 0.1em;
   pointer-events: none;
-  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+  animation: pillPulse 2.4s infinite ease-in-out;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  z-index: 6;
 }
 
 .dock-zoom-pill svg {
@@ -549,7 +610,8 @@ a {
 .dock-card:hover .dock-zoom-pill {
   background: var(--lime);
   color: var(--ink);
-  transform: scale(1.05);
+  transform: scale(1.08) translateY(-1px);
+  box-shadow: 0 4px 14px rgba(198, 243, 92, 0.45);
 }
 
 .dock-info {
@@ -652,20 +714,22 @@ a {
 
 .modal-media-frame {
   width: 100%;
-  max-height: 62vh;
-  background: #060e08;
+  max-height: 64vh;
+  background: radial-gradient(circle at center, #102618 0%, #050d07 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 12px;
+  padding: 16px;
 }
 
 .modal-media-frame img {
   max-width: 100%;
   max-height: 58vh;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
 }
 
 .modal-caption-bar {
@@ -1774,6 +1838,8 @@ a {
     width: 90px;
     height: 68px;
     flex-shrink: 0;
+    border-bottom: none;
+    border-right: 1px solid rgba(198, 243, 92, 0.2);
   }
 
   .dock-info {
